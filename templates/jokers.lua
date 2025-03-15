@@ -22,7 +22,7 @@
             -- atlas the joker uses for texture(s).
         atlas = '{{Atlas}}',
     
-            -- where on the atlas texture the joker is locarted.
+            -- where on the atlas texture the joker is located.
         pos = {
             x = '{{Atlas_X}}',
             y = '{{Atlas_Y}}'
