@@ -9,27 +9,50 @@
 <body>
     <h1>ANKH</h1>
 
-    <!-- Dropdown for selecting templates -->
+    <!-- dropdown junk start -->
     <label for="templateSelect">Choose Template:</label>
     <select id="templateSelect">
         <option value="">No Script Selected</option>
     </select>
+    <!-- dropdown junk end -->
     
-    <!-- File input for uploading templates -->
+    <!-- file input start -->
     <input type="file" id="fileInput" accept=".lua" />
+    <!-- file input end -->
 
-    <!-- Input fields for template variables -->
-    <div id="variableInputs"></div>
+    <!-- side panel junk start -->
+    <div id="'sidePanel">
+        <textarea id="descInput" placeholder="Enter Joker Description Here"></textarea>
+
+        <div id="previewContainer">
+            <p id="descName"> Joker </p>
+            <div id="descBubble">
+                <p id="descPreview">Preview Shows Here</p>
+            </div>
+        </div>
+     </div>
+    <!-- side panel junk end -->
+
+    <!-- variable stuff start -->
+    <div id="mainContainer"></div>
+        <div id="variableInputs"></div>
+    </div>
+    <!-- variable stuff end -->
 
     <!-- Button to generate the Lua script -->
     <button id="generateButton">Generate Lua Script</button>
 
-    <!-- Area to display the generated Lua script -->
-    <pre id="output"></pre>
-
     <!-- Button to export the generated Lua script as a .lua file -->
     <button id="exportButton" disabled>Export Lua Script</button>
 
+    <div></div>
+
+    <!-- Area to display the generated Lua script -->
+    <textarea id="output" readonly></textarea>
+
     <script src="script.js"></script>
+    <script src="templates.js"></script>
+    <script src="description.js"></script>
+
 </body>
 </html>
