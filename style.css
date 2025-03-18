@@ -63,6 +63,16 @@ label {
     font-weight: bold;
 }
 
+#bg {
+    position:fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: blur(15px);
+}
+
 #sidePanel {
     width: 300px;
     background-color: #4e5779;
