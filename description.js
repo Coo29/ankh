@@ -33,13 +33,34 @@ function applyColor() {
 }
 // description color junk end
 
-// description custom colors start
+// custom color name variables start
 const colorMap = {
-    mult: "red",
-    chips: "blue",
-
+    red: "ff4c40",
+    mult: "#ff4c40",
+    blue: "0096ff",
+    chips: "#0096ff",
+    green:  "#35bd86",
+    money: "#f5b244",
+    gold: "#eaba44",
+    attention: "#ff8f00",
+    purple: "#7b559c",
+    white: "#ffffff",
+    inactive: "#b1b1b1",
+    spades: "#292189",
+    hearts: "#f11b52",
+    clubs: "#074540",
+    diamonds: "#f15a27",
+    tarot: "#9e74ce",
+    planet: "#00a7ca",
+    spectral: "#2e76fd",
+    edition: "#bfb5ff",
+    dark_edition: "#6060fb",
+    legendary: "#aa5bb5",
+    enhanced: "#757cdc",
 };
+// custom color name variables end
 
+// custom color injection start
 document.getElementById("descInput").addEventListener("input", function() {
     let preview = document.getElementById("descPreview");
     let text = this.value;
@@ -55,3 +76,4 @@ document.getElementById("descInput").addEventListener("input", function() {
         preview.innerHTML = formattedText;
     }
 });
+// custom color injection end
