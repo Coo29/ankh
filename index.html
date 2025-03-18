@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANKH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="bg">
+        <source src="videos/bg.mp4" type="video/mp4">
+    </video>
+
+    <h1>ANKH</h1>
+
+    <!-- dropdown junk start -->
+    <label for="templateSelect">Choose Template:</label>
+    <select id="templateSelect">
+        <option value="">No Script Selected</option>
+    </select>
+    <!-- dropdown junk end -->
+    
+    <!-- file input start -->
+    <input type="file" id="fileInput" accept=".lua" />
+    <!-- file input end -->
+
+    <!-- side panel junk start -->
+    <div id="'sidePanel">
+        <textarea id="descInput" placeholder="Enter Joker Description Here"></textarea>
+
+        <div id="previewContainer">
+            <p id="descName"> Joker </p>
+            <div id="descBubble">
+                <p id="descPreview">Preview Shows Here</p>
+            </div>
+        </div>
+     </div>
+    <!-- side panel junk end -->
+
+    <!-- variable stuff start -->
+    <div id="mainContainer"></div>
+        <div id="variableInputs"></div>
+    </div>
+    <!-- variable stuff end -->
+
+    <!-- Button to generate the Lua script -->
+    <button id="generateButton">Generate Lua Script</button>
+
+    <!-- Button to export the generated Lua script as a .lua file -->
+    <button id="exportButton" disabled>Export Lua Script</button>
+
+    <div></div>
+
+    <!-- script view start -->
+    <textarea id="output" readonly></textarea>
+    <!-- script view end-->
+
+    <!-- js loading start -->
+    <script src="script.js"></script>
+    <script src="templates.js"></script>
+    <script src="description.js"></script>
+    <script src="sidebar.js"></script>
+    <!-- js loading end -->
+
+    <!-- side menu junk start -->
+    <div id="collapsibleMenu" class="collapsible-menu">
+
+        <button id="menuToggle" class="menu-toggle">Guide</button>
+
+        <div id="menuContent" class="menu-content">
+
+            <!-- color guide start -->
+            <div class="menu-selection">
+                <button class="section-toggle">Color Guide</button>
+                <div class="section-content">
+                    <h3>You can add colors to the descriptions of your jokers!</h3>
+                    <br>
+                    <p>They must be formatted as: </p>
+                    <p><font color="white">{C:</font><font color="#ff4c40">color</font><font color="white">}</font><font color="ff4c40">colored part</font><font color="white">{}</font> </p>
+                </div>
+            </div>
+            <!-- color guide end -->
+
+            <div class="menu-selection">
+                <button class="section-toggle">List of Colors</button>
+                <div class="section-content">
+                    <h3>A list of all the colors which work with Steamodded:</h3>
+                    <p><font color="ff4c40", size="3">red</font></p>
+                    <p><font color="ff4c40", size="3">mult</font></p>
+                    <p><font color="0096ff", size="3">blue</font></p>
+                    <p><font color="0096ff", size="3">chips</font></p>
+                    <p><font color="35bd86", size="3">green</font></p>
+                    <p><font color="f5b244", size="3">money</font></p>
+                    <p><font color="eaba44", size="3">gold</font></p>
+                    <p><font color="ff8f00", size="3">attention</font></p>
+                    <p><font color="7b559c", size="3">purple</font></p>
+                    <p><font color="#ffffff", size="3">white</font></p>
+                    <p><font color="b1b1b1", size="3">inactive</font></p>
+                    <p><font color="292189", size="3">spades</font></p>
+                    <p><font color="f11b52", size="3">hearts</font></p>
+                    <p><font color="074540", size="3">clubs</font></p>
+                    <p><font color="f15a27", size="3">diamonds</font></p>
+                    <p><font color="9e74ce", size="3">tarot</font></p>
+                    <p><font color="00a7ca", size="3">planet</font></p>
+                    <p><font color="2e76fd", size="3">spectral</font></p>
+                    <p><font color="bfb5ff", size="3">edition</font></p>
+                    <p><font color="6060fb", size="3">dark_edition</font></p>
+                    <p><font color="aa5bb5", size="3">legendary</font></p>
+                    <p><font color="757cdc", size="3">enhanced</font></p>
+                </div>
+        </div>  
+    </div>
+    <!-- side menu junk end -->
+
+</body>
+</html>
