@@ -143,6 +143,28 @@ function generateScript() {
 }
 // export button end
 
+// copy button start
+function copyToClipboard() {
+    const outputTextarea = document.getElementById("output");
+
+    if (!outputTextarea.value) {
+        alert("No script generated!");
+        return;
+    }
+
+    outputTextarea.select();
+    outputTextarea.setSelectionRange(0, 999999);
+    navigator.clipboard.writeText(outputTextarea.value)
+        .then(() => {
+            alert("Copied to Clipboard!");
+        })
+        .catch (err => {
+            console.error("Error copying script: ", err);
+            alert("failed to copy script.");
+        });
+}
+// copy button end
+
 // actual export script stuff start
 function exportScript() {
     const scriptContent = document.getElementById("output").textContent;

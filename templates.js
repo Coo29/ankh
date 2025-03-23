@@ -10,7 +10,7 @@
 const templates = {
     jokers: `
     SMODS.Joker { -- {{Name}} --
-       key = '{{Name}}',
+       key = '{{Key}}',
 
        -- description of the joker.
        loc_txt = {
@@ -23,8 +23,8 @@ const templates = {
        -- config of the joker. Variables go here.
        config = {
            extra = {
-               chips = '{{Chips}}',
-               chips_gain = '{{Chips_gain}}'
+               chips = {{Chips}},
+               chips_gain = {{Chips_gain}}
            }
        },
        -- rarity level, 0 = common, 1 = uncommon, 2 = rare, 3 = legendary.
@@ -35,11 +35,11 @@ const templates = {
 
        -- where on the atlas texture the joker is located.
        pos = {
-           x = '{{Atlas_X}}',
-           y = '{{Atlas_Y}}'
+           x = {{Atlas_X}},
+           y = {{Atlas_Y}}
        },
        -- cost of the joker in the shop.
-       cost = '{{Cost}}',
+       cost = {{Cost}},
 
        -- whether it is unlocked by default.
        unlocked = '{{Unlocked_TF}}',
