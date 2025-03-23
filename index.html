@@ -8,11 +8,11 @@
 </head>
 <body>
 
-    <video autoplay muted loop id="bg">
-        <source src="videos/bg.mp4" type="video/mp4">
-    </video>
+    <!-- shader load start -->
+    <div id="bg-canvas"></div>
+    <!-- shader load end -->
 
-    <h1>ANKH</h1>
+    <h1> ANKH</h1>
 
     <!-- dropdown junk start -->
     <label for="templateSelect">Choose Template:</label>
@@ -61,6 +61,8 @@
     <script src="templates.js"></script>
     <script src="description.js"></script>
     <script src="sidebar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="shader.js"></script>
     <!-- js loading end -->
 
     <!-- side menu junk start -->
