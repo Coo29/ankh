@@ -13,26 +13,28 @@
     <!-- shader load end -->
 
 <body>
-
-    <h1> ANKH</h1>
-
+    <center>
+        <h1 class="bouncy-text">ANKH</h1>
+    </center>
     <!-- dropdown junk start -->
     <label for="templateSelect">Choose Template:</label>
     <select id="templateSelect">
         <option value="">No Script Selected</option>
     </select>
     <!-- dropdown junk end -->
-    
+    <br>
     <!-- file input start -->
+     <label for="fileInput">Upload a Template</label>
     <input type="file" id="fileInput" accept=".lua" />
     <!-- file input end -->
-
+    <br>
+    <br>
     <!-- side panel junk start -->
     <div id="'sidePanel">
         <textarea id="descInput" placeholder="Enter Joker Description Here"></textarea>
 
         <div id="previewContainer">
-            <p id="descName"> Joker </p>
+            <p id="descName"> Example </p>
             <div id="descBubble">
                 <p id="descPreview">Preview Shows Here</p>
             </div>
@@ -53,6 +55,7 @@
     <button id="exportButton" disabled>Export Lua Script</button>
 
     <div></div>
+    <br>
 
     <!-- script view start -->
     <textarea id="output" readonly></textarea>
@@ -65,6 +68,7 @@
     <script src="sidebar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="shader.js"></script>
+    <script src="bouncy.js"></script>
     <!-- js loading end -->
 
     <!-- side menu junk start -->

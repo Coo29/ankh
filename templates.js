@@ -59,7 +59,43 @@ const templates = {
        -- whether duplicates of this joker can appear in the shop by default.
        allow_duplicates = '{{Allow_duplicates_TF}}',
    }
-    `
+    `,
+
+    decks: `
+    SMODS.Back{ --{{Name}}
+    name = "{{Name}}",      -- name of the deck (in code)
+    key = "{{Key}}",       -- key used to call the deck 
+    atlas = '{{Atlas}}',        -- atlas referenced for deck texture
+    pos = {             -- position of the texture on the atlas
+        x = 0,
+        y = 0,
+        },
+
+    config = {              -- config for the deck, can include hands, discards, consumables, vouchers, money, etc.
+        hands = {{Hands_Modifier}},
+        discards = {{Discards_Modifier}},
+        consumables = {'{{Consumables_Modifier}}'},
+        money = {{Money_Modifier}},
+    },
+
+    unlocked = {{Unlocked_TF}},
+    discovered = {{Discovered_TF}},
+
+    loc_txt = {
+        name = "{{Name}}", -- name the deck appears as in game
+        text = {            -- description text for the deck
+            {{Description}},
+        }
+    },
+    loc_vars = function(self)   --variable setup
+        return { vars = { 
+            self.config.discards,   -- #1#
+            self.config.hands,      -- #2#
+            self.config.consumables,-- #3#
+            self.config.money,      -- #4#
+        }}
+    end,`
+
 };
 
 
